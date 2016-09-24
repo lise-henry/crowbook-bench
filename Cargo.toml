@@ -1,0 +1,19 @@
+[package]
+name = "crowbook-bench"
+version = "0.1.0"
+authors = ["Elisabeth Henry <liz.henry@ouvaton.org>"]
+description = "Bench crowbook"
+repository = "https://github.com/lise-henry/crowbook-bench"
+readme = "README.md"
+license = "GPL-3.0"
+
+[lib]
+name = "crowbook_bench"
+doctest = false
+path = "src/lib.rs"
+
+[dependencies]
+crowbook = "=0.1.0"
+
+
+

@@ -7,13 +7,34 @@ repository = "https://github.com/lise-henry/crowbook-bench"
 readme = "README.md"
 license = "GPL-3.0"
 
+[profile.release]
+opt-level = 3
+debug = false
+rpath = false
+lto = false
+debug-assertions = false
+codegen-units = 1
+panic = 'unwind'
+
+[profile.bench]
+opt-level = 3
+debug = false
+rpath = false
+lto = false
+debug-assertions = false
+codegen-units = 1
+panic = 'unwind'
+
 [lib]
 name = "crowbook_bench"
 doctest = false
 path = "src/lib.rs"
 
 [dependencies]
-crowbook = "=0.1.0"
+#crowbook = { path = "../crowbook", default-features = false }
+crowbook = "=0.10.3"
+
+
 
 
 
